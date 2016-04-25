@@ -9,9 +9,9 @@ tool written in Javascript. The tool is primarily oriented towards static sites
 hosted on github-pages. 
 
 ### Developer
-**Name** Ganesh Prasad (GnsP)
-**Email** sir.gnsp@gmail.com
-**IRC** gnsp
+- **Name** Ganesh Prasad (GnsP)
+- **Email** sir.gnsp@gmail.com
+- **IRC** gnsp
 
 ### Background, Motivation and Intended Use-Cases
 Well, I was thinking about creating a [portfolio for myself](https://gnsp.github.io)
@@ -36,3 +36,12 @@ environment. So I decided upon the following requirements.
 Hence, based on these requirements, I decided to build a new blog management system.
 As we can see from the requirements, it's intended to be used by developers who 
 like to work from the commandline environment mostly.
+
+### Installation
+The package is available on npm and that makes the installation easier than anything.
+**Note** *This package is intended to be used as a standalone tool rather than a module,
+  so a global installtion might be more convenient than a local one.*
+
+'sudo npm install -g ghournal'
+
+That does the installation.
