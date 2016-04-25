@@ -42,6 +42,6 @@ The package is available on npm and that makes the installation easier than anyt
 **Note** *This package is intended to be used as a standalone tool rather than a module,
   so a global installtion might be more convenient than a local one.*
 
-'sudo npm install -g ghournal'
+`sudo npm install -g ghournal`
 
 That does the installation.
