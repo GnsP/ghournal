@@ -1,0 +1,44 @@
+{
+    "filepath": "posts.json",
+    "TEST1": {
+        "filepath": "./posts/TEST1/post.json",
+        "title": "24th April, 2016",
+        "abstract": "Just another random post",
+        "created": "24th April, 2016",
+        "modified": "25th April, 2016",
+        "published": true,
+        "categories": [
+            "testing"
+        ],
+        "content": "<p>This is a testing post</p>"
+    },
+    "TEST2": {
+        "filepath": "./posts/TEST2/post.json",
+        "title": "test2",
+        "abstract": "Just another random post",
+        "created": "24th April, 2016",
+        "modified": "24th April, 2016",
+        "published": true,
+        "categories": []
+    },
+    "TEST3": {
+        "filepath": "./posts/TEST3/post.json",
+        "title": "24th April, 2016",
+        "abstract": "This is a very long abstract text. This is supposed to test the display capabilities of the list command. It should wrap the text properly while displaying in the treeview mode.",
+        "created": "24th April, 2016",
+        "modified": "24th April, 2016",
+        "published": true,
+        "categories": [
+            "testing"
+        ]
+    },
+    "null": {
+        "filepath": "./posts/null/post.json",
+        "title": "25th April, 2016",
+        "abstract": "Just another post",
+        "created": "25th April, 2016",
+        "modified": "25th April, 2016",
+        "published": false,
+        "categories": []
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "ghournal",
+  "version": "1.0.0",
+  "description": "A commandline based blogging system that stores blogs and posts in JSON and provides an interface for frontend frameworks like angular running on github-pages to display blogs",
+  "main": "commands/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blogging",
+    "tool"
+  ],
+  "author": "Ganesh Prasad (GnsP)",
+  "license": "MIT",
+  "bin": {
+    "ghournal": "./commands/index.js"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "fs": "0.0.2",
+    "html-to-text": "^2.1.0",
+    "markdown": "^0.5.0",
+    "progress": "^1.1.8",
+    "prompt-sync": "^4.0.4",
+    "shelljs": "^0.6.0",
+    "validator": "^5.2.0"
+  }
+}

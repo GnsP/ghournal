@@ -1,0 +1,23 @@
+{
+    "2016": {
+        "April": [
+            {
+                "postID": "TEST1",
+                "date": 24
+            },
+            {
+                "postID": "TEST2",
+                "date": 24
+            },
+            {
+                "postID": "TEST3",
+                "date": 24
+            },
+            {
+                "postID": null,
+                "date": 25
+            }
+        ]
+    },
+    "filepath": "timeline.json"
+}

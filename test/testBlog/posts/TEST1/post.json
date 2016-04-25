@@ -1,0 +1,12 @@
+{
+    "filepath": "./posts/TEST1/post.json",
+    "title": "24th April, 2016",
+    "abstract": "Just another random post",
+    "created": "24th April, 2016",
+    "modified": "25th April, 2016",
+    "published": true,
+    "categories": [
+        "testing"
+    ],
+    "content": "<p>This is a testing post</p>"
+}

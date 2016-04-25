@@ -1,0 +1,12 @@
+{
+    "filepath": "./posts/TEST3/post.json",
+    "title": "24th April, 2016",
+    "abstract": "This is a very long abstract text. This is supposed to test the display capabilities of the list command. It should wrap the text properly while displaying in the treeview mode.",
+    "created": "24th April, 2016",
+    "modified": "25th April, 2016",
+    "published": true,
+    "categories": [
+        "testing"
+    ],
+    "content": "<p>Through the gates, flanked with statues of winged boars, and up the sweeping\ndrive the carriages trundled, swaying dangerously in what was fast becoming a\ngale. Leaning against the window, Harry could see Hogwarts coming nearer, its\nmany lighted windows blurred and shimmering behind the thick curtain of rain.\nLightning flashed across the sky as their carriage came to a halt before the great\noak front doors, which stood at the top of a flight of stone steps. People who had\noccupied the carriages in front were already hurrying up the stone steps into the\ncastle. Harry, Ron, Hermione, and Neville jumped down from their carriage and\ndashed up the steps too, looking up only when they were safely inside the\ncavernous, torch-lit entrance hall, with its magnificent marble staircase.\n&quot;Blimey,&quot; said Ron, shaking his head and sending water everywhere, &quot;if that keeps\nup the lake&#39;s going to overflow. I&#39;m soak - ARRGH!&quot;</p>\n\n<p>A large, red, water-filled balloon had dropped from out of the ceiling onto Ron&#39;s\nhead and exploded. Drenched and sputtering, Ron staggered sideways into Harry,\njust as a second water bomb dropped - narrowly missing Hermione, it burst at\nHarry&#39;s feet, sending a wave of cold water over his sneakers into his socks. People\nall around them shrieked and started pushing one another in their efforts to get out\nof the line of fire. Harry looked up and saw, floating twenty feet above them,\nPeeves the Poltergeist, a little man in a bell-covered hat and orange bow tie, his\nwide, malicious face contorted with concentration as he took aim again.\n&quot;PEEVES!&quot; yelled an angry voice. &quot;Peeves, come down here at ONCE!&quot;</p>\n\n<p>Professor McGonagall, Deputy Headmistress and head of Gryffindor House, had\ncome dashing out of the Great Hall; she skidded on the wet floor and grabbed\nHermione around the neck to stop herself from falling.</p>"
+}

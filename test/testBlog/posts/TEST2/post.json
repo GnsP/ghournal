@@ -1,0 +1,10 @@
+{
+    "filepath": "./posts/TEST2/post.json",
+    "title": "test2",
+    "abstract": "Just another random post",
+    "created": "24th April, 2016",
+    "modified": "24th April, 2016",
+    "published": true,
+    "categories": [],
+    "content": "<p>Write the content in markdown here</p>"
+}

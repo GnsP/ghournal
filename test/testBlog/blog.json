@@ -1,0 +1,12 @@
+{
+    "filepath": "blog.json",
+    "name": "Blog",
+    "description": "description not given",
+    "tagline": "Built with and managed by ghournal",
+    "url": "URL not given",
+    "authorLink": "author.json",
+    "postsLink": "posts.json",
+    "categoriesLink": "categories.json",
+    "timelineLink": "timeline.json",
+    "rootDirectory": "/home/gnsp/ghournal/commands/test"
+}
