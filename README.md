@@ -86,3 +86,55 @@ Blog
 - **timeline.json** This file gives a timeline view of your posts.
 
 
+*The detailed structure of each file is out of the scope of this document, 
+please check the files manually to know about their structure. The files are
+generated with proper indentation for human readability.*
+
+#### Initialise a Blog
+Go to the directory where you want to create your blog and run
+
+```ghournal init```
+
+This will prompt you to provide information like 'name of the blog', 'tagline',
+'url', 'description', 'name of author', 'email of author' etc. After you provide 
+these values, it will ask for confirmation and then generate the directory structure
+described above.
+
+Now you are all set to start blogging, at least in a backend point of view, you are all set.
+
+#### Add a category
+On the base directory of your blog run
+
+```ghournal add-category [categoryNames...]```
+
+This will add the specified categories to the categories.json file. Note that categories
+are like Labels in Blogger. But unlike Blogger, you can not add categories while
+creating posts. This is an intended feature to guarantee that the user does not 
+add more categories than necessary. Keeping the blog interface clean is always more
+important than the content itself, because if your interface is cluttered, the 
+visitors are more likely to lose interest before going through the actual content.
+
+#### Create a new post
+On the base directory of your blog run
+
+```ghournal new [postID]```
+
+The postID is required to be unique. If you provide a postID that's not unique or
+you do not provide a postID at all, the tool will prompt you to provide one as long
+as you do not come up with a valid and unique postID or choose to exit with a `Ctrl+C`.
+
+After you give a unique postID, it will prompt you to give a title (default value of
+which is the current date in 'DDth MONTH, YYYY' format) and an abstract. Then it'll
+create the directories and files reauired for the post and spawn Vim with the draft.blogpost
+open in it for editing. The command will exit as soon as you exit the Vim.
+
+#### Edit a post
+On the base directory of your blog run
+
+```ghournal edit [postID]```
+
+The postID here should be the ID of an existing post. If you do not provide a postID 
+or provide a postID that's not created before, you'll be prompted to give a valid postID.
+Once you give a valid postID, the command will spawn Vim with the draft.blogpost file
+of the post for editing. The command will exit as soon as you exit vim.
+
