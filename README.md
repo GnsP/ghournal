@@ -32,6 +32,7 @@ environment. So I decided upon the following requirements.
 5. The REST like API should be usable with Angular and similar frontend frameworks for Single Page Apps.
 6. The tool must be lightweight and flexible.
 7. The primary target for hosting is github-pages.
+8. The posts should be written in markdown for ease of use.
 
 Hence, based on these requirements, I decided to build a new blog management system.
 As we can see from the requirements, it's intended to be used by developers who 
@@ -138,3 +139,44 @@ or provide a postID that's not created before, you'll be prompted to give a vali
 Once you give a valid postID, the command will spawn Vim with the draft.blogpost file
 of the post for editing. The command will exit as soon as you exit vim.
 
+#### Publish a post
+
+On the base directory of your blog run
+
+```ghournal publish <postID>```
+
+The postID should be that of an existing post. This will compile the draft from 
+markdown to html and store the info in post.json and other associated files. This 
+will also mark the post as published.
+
+#### List posts
+
+On the base directory of your blog run
+
+```ghournal list [categoryNames...]```
+
+This will list all posts tagged with provided category names. If no category names
+are given, this will simply list every post out there. The list is displayed in a
+tree like structure for convenience.
+
+#### Read a post
+
+On the base directory of your blog run
+
+```ghournal view <postID>```
+
+This will display the contents of the post inside the terminal. The html would be
+converted to text and displayed in a readable manner.
+
+
+### Concluding Remarks
+
+Here are few points worth considering.
+
+- This tool is a Beta, as of now. If you find a bug, please report here in the issue tracker. I'll be more than obliged if you choose to fix a bug or contribute in any way and send me a pull request.
+
+- In the next major version, i.e. v2.0.0, the plan is to add a new command `ghournal deploy` which will generate some frontend files automatically.
+
+- I also want to provide some sort of plug-in and themeing support for the blogs.
+
+- And as the last remark of this manual, *"write your thoughts before they are forgotten and lost"*.
