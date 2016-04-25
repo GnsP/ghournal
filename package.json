@@ -25,5 +25,9 @@
     "prompt-sync": "^4.0.4",
     "shelljs": "^0.6.0",
     "validator": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GnsP/ghournal.git"
   }
 }
