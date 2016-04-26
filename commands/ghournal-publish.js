@@ -89,13 +89,23 @@ for(var key in parsedContent) {
   }
 }
 
+
+// function to find if a value is alreadt in an array
+function find(arr, val) {
+  for(var i=0; i<arr.length; i++)
+    if(arr[i]==val) return true;
+  return false;
+}
+
+
 // Do not add a category if that has not been added by the user using 'ghournal
 // add-category' previously.
+
 post.categories = [];
 parsedContent.categories.forEach(function(cat) {
   if(categories[cat]) {
-    categories[cat].push(postID);
-    post.categories.push(cat);
+    if(!find(categories[cat], postID)) categories[cat].push(postID);
+    if(!find(post.categories, cat)) post.categories.push(cat);
   }
   else pm.error('category '+cat+' does not exist.'+
     ' Add it with "ghournal add-category '+cat+'" first');
