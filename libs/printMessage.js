@@ -19,3 +19,5 @@ module.exports.task = function(message) {
 module.exports.message = function(message) {
   console.log(chalk.magenta(message));
 }
+
+//module.exports.message('hello');

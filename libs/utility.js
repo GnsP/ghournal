@@ -4,6 +4,18 @@ var fs = require('fs');
 
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+function dateOrdinal(dd) {
+  var d0 = dd%10;
+  var d1 = Math.floor(dd/10);
+
+  if(d1 != 1) {
+    if(d0==1) return dd + 'st';
+    if(d0==2) return dd + 'nd';
+    if(d0==3) return dd + 'rd';
+  }
+  else return dd + 'th';
+}
+
 module.exports.Today = function() {
   var self = this;
   self.today = new Date();
@@ -11,7 +23,7 @@ module.exports.Today = function() {
   self.mm = months[self.today.getMonth()];
   self.yyyy = self.today.getFullYear();
 
-  self.dateString = self.dd+'th '+self.mm+', '+self.yyyy;
+  self.dateString = dateOrdinal(self.dd)+' '+self.mm+', '+self.yyyy;
 }
 
 
