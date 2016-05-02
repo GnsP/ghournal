@@ -8,6 +8,12 @@
 tool written in Javascript. The tool is primarily oriented towards static sites
 hosted on github-pages. 
 
+### Live Demo
+
+I have designed a [blog](https://gnsp.github.io/blog) for myself using **ghournal** in the back end.
+The blog is the Demo, it can be found at [https://gnsp.github.io/blog](https://gnsp.github.io/blog).
+
+
 ### Developer
 - **Name** Ganesh Prasad (GnsP)
 - **Email** sir.gnsp@gmail.com
