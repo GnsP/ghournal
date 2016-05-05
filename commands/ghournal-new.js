@@ -123,7 +123,7 @@ posts.save();
 
 if(!timeline[today.yyyy]) timeline[today.yyyy] = {};
 if(!timeline[today.yyyy][today.mm]) timeline[today.yyyy][today.mm] = [];
-timeline[today.yyyy][today.mm].push({"postID":postID, "date":today.dd});
+timeline[today.yyyy][today.mm].unshift({"postID":postID, "date":today.dd});
 timeline.save();
 
 

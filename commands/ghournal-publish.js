@@ -104,7 +104,7 @@ function find(arr, val) {
 post.categories = [];
 parsedContent.categories.forEach(function(cat) {
   if(categories[cat]) {
-    if(!find(categories[cat], postID)) categories[cat].push(postID);
+    if(!find(categories[cat], postID)) categories[cat].unshift(postID);
     if(!find(post.categories, cat)) post.categories.push(cat);
   }
   else pm.error('category '+cat+' does not exist.'+
