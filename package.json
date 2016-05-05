@@ -1,6 +1,6 @@
 {
   "name": "ghournal",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A commandline based blogging system that stores blogs and posts in JSON and provides an interface for frontend frameworks like angular running on github-pages to display blogs",
   "main": "commands/index.js",
   "scripts": {
