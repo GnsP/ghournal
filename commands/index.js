@@ -11,12 +11,10 @@ argv
   .command('new [postID]', 'Create a new blog-post as draft')
   .command('add-category [categoryID]', 'Add a new category')
   .command('list [categoryID]', 'List all posts in a given category')
-  .command('timeline', 'View the timeline list of posts')
   .command('view [postID]', 'View a post')
   .command('edit [postID]', 'Edit a post')
   .command('status', 'View status of the blog', {isDefault: true})
   .command('publish [postID]', 'Publish the post')
-  .command('commit', 'Archive current state of blog')
   .parse(process.argv);
 
 // Print the banner
