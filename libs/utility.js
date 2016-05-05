@@ -12,6 +12,7 @@ function dateOrdinal(dd) {
     if(d0==1) return dd + 'st';
     if(d0==2) return dd + 'nd';
     if(d0==3) return dd + 'rd';
+    return dd + 'th';
   }
   else return dd + 'th';
 }
