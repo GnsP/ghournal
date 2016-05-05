@@ -44,6 +44,22 @@ Hence, based on these requirements, I decided to build a new blog management sys
 As we can see from the requirements, it's intended to be used by developers who 
 like to work from the commandline environment mostly.
 
+
+### Differences from Jekyll
+
+Jekyll is a static website generator, technically a text-transformation engine. 
+But ghournal is a blog-engine for static file serving platforms like github-pages.
+It simply stores and manages your blog posts and related data in a well defined
+directory structure described in the next section. The actual data is stored as 
+JSON files. The idea is to maintain the separation of content and the front-end 
+look and feel even in the absence of a database and back-end scripting. The directories
+are structured to works= like a REST API. The front-end of the blog is 
+supposed to be developed by the user. We recommend using AngularJS in the 
+front-end and retrieve the posts and other data from the directory structure 
+asynchronously. We are planning to generate stock frontends targetted for github
+pages from version 2.
+
+
 ### Installation
 The package is available on npm and that makes the installation easier than anything.
 **Note** *This package is intended to be used as a standalone tool rather than a module,

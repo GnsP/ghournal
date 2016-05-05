@@ -1,24 +1,25 @@
 #!/usr/bin/env node
 
-var argv = require('commander');
 var chalk = require('chalk');
-var fs = require('fs');
-
-argv
-  .option('--pretty', 'Pretty-print the status')
-  .parse(process.argv);
-
-var blogData;
-fs.readFile('blog.json', 'utf8', function(err, data){
-  if(err) printStatus('Error in reading blog.json, Initialise the blog first');
-  else{
-    blogData = JSON.parse(data);
-    printStatus(blogData);
-  }
-});
+var jfh = require('../libs/jsonFileHandler');
+var pm = require('../libs/printMessage')
 
 
-function printStatus(status) {
-  if(argv.pretty) console.log(chalk.bold.red('Pretty-print SET'), status);
-  else console.log(status);
+var existingData = jfh.jsonFileBuilder({});
+var blog = new existingData('blog.json');
+
+var exists = blog.read();
+
+if(!exists) {
+  pm.error('Blog not initialised');
+  throw 'Blog not initialised';
 }
+
+for(var key in blog) {
+  if(key != 'filepath' && typeof blog[key] != 'function') {
+    pm.task(key);
+    console.log(blog[key]);
+    console.log();
+  }
+}
+
