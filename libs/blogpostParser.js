@@ -1,11 +1,17 @@
-var markdown = require('markdown').markdown;
+//var markdown = require('markdown').markdown;
+var markdown = require('marked');
 var fs = require('fs');
 var pm = require('./printMessage');
 
+markdown.setOptions({
+  highlight: function(code, lang) {
+    return require('highlightjs').highlightAuto(code).value;
+  },
+});
 
 module.exports.Parser = function(filepath) {
   var self = this;
-  
+
   // methods for setting the path to the blogpost file to be parsed
   // filepath can be supplied during construction of the Parser object
   // or it can be se using the setFilepath method.
@@ -15,7 +21,7 @@ module.exports.Parser = function(filepath) {
     self.filepath = filepath;
   }
 
-  // Read the blogpost file and return string 
+  // Read the blogpost file and return string
   // If read unsuccessful show error message and return false
 
   self.readFile = function() {
@@ -30,8 +36,8 @@ module.exports.Parser = function(filepath) {
     }
   }
 
-  // Parse a string in the blogpost format return a JSON Object representing 
-  // the blogpost. During this parsing the header information is parsed and 
+  // Parse a string in the blogpost format return a JSON Object representing
+  // the blogpost. During this parsing the header information is parsed and
   // the content is parsed from markdown to HTML.
   //
   // The format for the blogpost is:
@@ -60,7 +66,7 @@ module.exports.Parser = function(filepath) {
     return post;
   }
 
-  
+
   // Parse the header part of the blogpost string, construct a post oblject,
   // put the header information in the object and return the object
 
@@ -88,15 +94,17 @@ module.exports.Parser = function(filepath) {
   // parse the post content from markdown to HTML
 
   self.parseContentString = function(string) {
-    return markdown.toHTML(string.trim());
+    markdown.setOptions({ baseUrl: self.baseurl });
+    return markdown(string.trim());
   }
 
   // Read and parse a file in one go.
   // This is gonna be the most used function anyway. :)
 
-  self.parse = function() {
+  self.parse = function(opts) {
+    self.baseurl = opts ? opts.baseurl : '';
     var data = self.readFile();
-    if(data) 
+    if(data)
       return self.parseString(data);
     else return {};
   }

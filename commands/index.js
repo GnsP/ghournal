@@ -9,6 +9,7 @@ argv
   .version('1.0.0')
   .command('init','Initialise a blog in current directory')
   .command('new [postID]', 'Create a new blog-post as draft')
+  .command('import [filename]', 'Import a markdown file as a blog post')
   .command('add-category [categoryID]', 'Add a new category')
   .command('list [categoryID]', 'List all posts in a given category')
   .command('view [postID]', 'View a post')

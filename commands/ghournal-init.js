@@ -5,7 +5,7 @@ var fs = require('fs');
 var chalk = require('chalk');
 
 
-// JSON file schema for the blog object. The following schema 
+// JSON file schema for the blog object. The following schema
 // specifies the keys in the JSON file that are supplied by
 // the user and defines the datatypes and prompts for those keys.
 // The actual object is created using this schema.
@@ -117,14 +117,15 @@ timeline.save();
 try {
   fs.mkdirSync('assets');
   fs.mkdirSync('posts');
+  fs.mkdirSync('categories');
 } catch (e) {
   // Don't give a fuck if an exception occurs here.
   // Because the excption occurs mostly when the directories are
-  // already there. 
+  // already there.
   // If in any case, the directories do not exist and we still
-  // get an exception, Just warn the user to manually create them 
+  // get an exception, Just warn the user to manually create them
   // id necessary.
-  
+
   console.log(chalk.black.bgYellow('WARNING')+
       ' Either the posts and assets directories already exist '+
       'or the script failed to create them. In any case create them manually '+

@@ -9,7 +9,7 @@ var argv = require('commander');
 var prompt = require('prompt-sync')();
 var chalk = require('chalk');
 
-// Read the postID given as the argument and store in postID 
+// Read the postID given as the argument and store in postID
 // variable. If postid not given in arguments, make postID false
 // to prompt the user to give a valid postID.
 
@@ -72,7 +72,7 @@ if(postID == false || !validatePostID(postID)) postID = promptUserForPostID();
 
 
 
-// create a separate directory for the post with the given postID in the 
+// create a separate directory for the post with the given postID in the
 // posts directory. Create a assets directory in the post diectory and also
 // setup a post.json file there.
 
@@ -104,6 +104,7 @@ var postDataFile = jfh.jsonFileBuilder({
                                       });
 
 var post = new postDataFile('./posts/'+postID+'/post.json');
+post.id = postID;
 post.load();
 
 

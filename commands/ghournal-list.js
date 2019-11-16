@@ -19,10 +19,10 @@ exists = posts.read() && exists;
 //console.log(categories);
 //console.log(posts);
 
-if(!exists) 
+if(!exists)
   throw 'Blog not initialised in '+process.cwd();
 
-// Read the category names from the command-line arguments 
+// Read the category names from the command-line arguments
 // and add them to the cats list
 
 var list = {};
@@ -59,7 +59,7 @@ else {
     }
   }
 }
-  
+
 // display the list
 console.log();
 console.log();
@@ -83,6 +83,7 @@ for(var cat in list) {
 }
 
 function displayAbstract(text) {
+  if (!text) return '';
   var output = '';
   var chunk = text;
   var lim = 55;
@@ -101,5 +102,5 @@ function displayAbstract(text) {
   return output;
 }
 
-  
+
 

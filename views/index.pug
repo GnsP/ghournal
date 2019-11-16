@@ -1,0 +1,51 @@
+mixin entry (post)
+  li
+    h5= post.created
+    h2 
+      a(href=post.href)= post.title
+    ul.tags
+      each cat in post.categoryObjs
+        li
+          a(href=cat.href)= cat.name
+    p!= post.abstract
+
+doctype html
+html(lang='en')
+  head
+    title= blog.name
+    meta(name='viewport', content='initial-scale=1.0')
+    link(rel='stylesheet', href=blog.stylesheet)
+
+  body
+    header
+      h3
+        a(href=blog.baseurl)= blog.description
+      if blog.hasLinks
+        nav
+          ul
+            each link in blog.links
+              li
+                a(href=link.href)= link.text
+
+    if blog.cover_image
+      section.hero
+        img(src=blog.cover_image)
+        h1= blog.name
+        h3= blog.tagline
+
+    main
+      ul
+        each post in posts
+          +entry(post)
+
+    aside
+      h4 CATEGORIES
+      ul
+        each cat in categories
+          li
+            a(href=cat.href)= cat.name
+
+    .footer
+      h6 Powered by <a href='https://npmjs.com/package/ghournal'>ghournal</a>
+
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
